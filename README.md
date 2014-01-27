@@ -1,4 +1,4 @@
-A simple preloader that utilizes jQuery deferreds and takes multiple callbacks.
+A simple preloader that utilizes jQuery deferreds to delay code execution until the specified external assets have been loaded. Supports multiple callbacks passed to its done method.
 
 ### Usage
 
