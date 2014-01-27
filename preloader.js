@@ -8,7 +8,7 @@
         },
         _loadAssets: function () {
             var deferreds = [],
-                self = this;
+                callbacks = this.callbacks;
 
             $.each(this._assets, function (i, assetURL) {
                 var img = new Image(),
@@ -21,7 +21,7 @@
             });
 
             $.when.apply($, deferreds).then(function () {
-                $.each(self._callbacks, function (i, fn) {
+                $.each(callbacks, function (i, fn) {
                     fn.call();
                 });
             });
